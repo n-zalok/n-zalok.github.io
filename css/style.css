@@ -1,0 +1,107 @@
+:root{
+  --bg:#f8f9fb;
+  --accent:#276ef1;
+  --muted:#6b7280;
+  --card:#fff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, Roboto, Arial, sans-serif;background:var(--bg);color:#111;margin:0}
+.container{max-width:1200px;margin:0 auto;padding:32px}
+.site-header{background:#fff;border-bottom:1px solid #e6e9ef}
+.site-header .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-weight:700}
+.nav-links{display:flex;gap:12px;align-items:center}
+.nav-links a{margin-left:0;color:var(--muted);text-decoration:none}
+.nav-links a.active{color:var(--accent)}
+.hero{display:flex;gap:28px;align-items:center;padding:32px 0}
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+.intro h1{margin:0}
+.posts-list{display:grid;grid-template-columns:1fr;gap:20px;margin-top:18px;width:100%}
+/* make the posts section full-bleed so cards can utilize the viewport width */
+#posts-section .posts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers the .post-card horizontally */
+  gap: 20px;
+  margin-top: 18px;
+  padding: 32px 0;
+  width: 100%;
+  background: transparent;
+}
+.post-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(32, 40, 60, 0.06);
+  cursor: pointer;
+  min-height: 160px;
+  width: min(1100px, 95%);
+  display: flex;
+  flex-direction: column;   /* ← stack vertically */
+  gap: 8px;                 /* spacing between title, date, and content */
+  align-items: flex-start;  /* keep them left-aligned */
+}
+.post-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+}
+.post-card p {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.5;
+}
+.post-card .read-more{margin-top:auto;align-self:flex-start}
+.btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;border:0;cursor:pointer}
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:18px}
+/* Pagination: numbered page buttons */
+.pagination .page-btn{background:#fff;border:1px solid #e6e9ef;color:var(--muted);padding:8px 12px;border-radius:6px;cursor:pointer}
+.pagination .page-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.site-footer{background:#fff;border-top:1px solid #e6e9ef;margin-top:40px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;padding:12px 24px}
+.footer-inner .social a{margin-left:12px;color:var(--muted);text-decoration:none}
+.post-page{padding:40px 0}
+.post-date{color:var(--muted);margin-bottom:16px}
+.read-more{color:var(--accent);text-decoration:none;margin-left:8px}
+
+/* Project and certificate cards styles */
+.project-card{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 8px 24px rgba(32,40,60,0.06);display:flex;gap:16px;align-items:flex-start;cursor:pointer}
+/* Thumbnails should be cropped to fill the thumbnail box */
+.project-card .thumb{width:140px;height:120px;object-fit:cover;border-radius:8px;flex-shrink:0;background:transparent;padding:0;display:block}
+/* Body uses column layout so text stacks and the button appears below the description */
+.project-card .project-body{flex:1;display:flex;flex-direction:column}
+.project-card h3{margin:0 0 8px}
+.project-card p{margin:0 0 12px;color:var(--muted);line-height:1.4}
+.project-card .btn{margin-top:auto;align-self:flex-start}
+.project-list, .certificate-list{display:grid;gap:18px;margin-top:12px}
+
+/* Responsive adjustments: stack content on small screens and give posts more breathing room on large screens */
+@media (max-width: 699px) {
+  .hero{flex-direction:column;align-items:flex-start;padding:18px 0}
+  .profile-pic{width:120px;height:120px}
+  .container{padding:18px}
+  .post-card{padding:18px;min-height:120px}
+  .footer-inner{flex-direction:column;gap:8px;align-items:flex-start}
+  .project-card{flex-direction:column;align-items:flex-start}
+  .project-card .thumb{width:100%;height:160px;object-fit:cover;padding:0}
+}
+
+@media (min-width: 1200px) {
+  .container{padding:40px}
+  .profile-pic{width:160px;height:160px}
+  .post-card{padding:28px;min-height:160px}
+}
+
+/* Keep posts vertically stacked and make better use of width (no narrow two-column grid) on large screens */
+@media (min-width: 1200px) {
+  .posts-list{grid-template-columns:repeat(2, 1fr)}
+  .post-card{min-height:180px}
+}

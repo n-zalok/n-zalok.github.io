@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Certificates</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Noor Zalouk</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html" class="active">Certificates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="certificates">
+      <h1>Certificates</h1>
+      <div class="certificate-list" id="certificate-list">
+        <!-- certificates rendered by js/certificates.js -->
+      </div>
+      <div class="pagination">
+        <button id="prev-cert" class="btn" disabled>Previous</button>
+        <button id="next-cert" class="btn">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Noor Zalouk</div>
+      <div class="social">
+        <a id="github-link" href="https://github.com/n-zalok" target="_blank">GitHub</a>
+        <a id="linkedin-link" href="https://www.linkedin.com/in/n-zalouk/" target="_blank">LinkedIn</a>
+        <a id="wa-link" href="https://wa.me/+201024468807" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/certificates.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

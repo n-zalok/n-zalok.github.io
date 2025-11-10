@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Noor Zalouk</div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <img src="images/profile.jpg" alt="Profile" class="profile-pic">
+      <div class="intro">
+        <h1>Overview</h1>
+        <p class="brief">Data scientist trying to be a part of the AI revolution</p>
+      </div>
+    </section>
+
+    <section id="posts-section">
+      <h2>Posts</h2>
+      <div id="posts-list" class="posts-list"></div>
+      <div class="pagination">
+        <button id="prev-btn" class="btn" disabled>Previous</button>
+        <button id="next-btn" class="btn">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Noor Zalouk</div>
+      <div class="social">
+        <a id="github-link" href="https://github.com/n-zalok" target="_blank">GitHub</a>
+        <a id="linkedin-link" href="https://www.linkedin.com/in/n-zalouk/" target="_blank">LinkedIn</a>
+        <a id="wa-link" href="https://wa.me/+201024468807" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/posts.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
