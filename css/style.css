@@ -75,7 +75,7 @@ body{font-family:Inter, Roboto, Arial, sans-serif;background:var(--bg);color:#11
 /* Project and certificate cards styles */
 .project-card{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 8px 24px rgba(32,40,60,0.06);display:flex;gap:16px;align-items:flex-start;cursor:pointer}
 /* Thumbnails should be cropped to fill the thumbnail box */
-.project-card .thumb{width:140px;height:120px;object-fit:cover;border-radius:8px;flex-shrink:0;background:transparent;padding:0;display:block}
+.project-card .thumb{width:140px;height:96px;object-fit:cover;border-radius:8px;flex-shrink:0}
 /* Body uses column layout so text stacks and the button appears below the description */
 .project-card .project-body{flex:1;display:flex;flex-direction:column}
 .project-card h3{margin:0 0 8px}
@@ -91,7 +91,7 @@ body{font-family:Inter, Roboto, Arial, sans-serif;background:var(--bg);color:#11
   .post-card{padding:18px;min-height:120px}
   .footer-inner{flex-direction:column;gap:8px;align-items:flex-start}
   .project-card{flex-direction:column;align-items:flex-start}
-  .project-card .thumb{width:100%;height:160px;object-fit:cover;padding:0}
+  .project-card .thumb{width:100%;height:240px;object-fit:cover}
 }
 
 @media (min-width: 1200px) {
@@ -105,3 +105,6 @@ body{font-family:Inter, Roboto, Arial, sans-serif;background:var(--bg);color:#11
   .posts-list{grid-template-columns:repeat(2, 1fr)}
   .post-card{min-height:180px}
 }
+
+/* Post page full image */
+.post-page .full-thumb{width:100%;height:auto;max-height:600px;object-fit:contain;border-radius:10px;margin-bottom:20px}

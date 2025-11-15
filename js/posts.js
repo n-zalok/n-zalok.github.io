@@ -2,7 +2,8 @@ const POSTS_PER_PAGE = 4;
 
 // Sample posts data. Replace or extend with your own posts (max 50 words in preview will be enforced).
 const posts = [
-  {id:1,title:'Welcome to my portfolio',date:'2025-11-11',content:`Here I would share my thoughts, projects and achievements. I delayed creating this portofolio for a long time because I was using Linkedin as my portofolio but thanks to their random account restrictions I finally created it.`}
+  {id:1,title:'Welcome to my portfolio',date:'2025-11-11',content:`Here I would share my thoughts, projects and achievements. I delayed creating this portofolio for a long time because I was using Linkedin as my portofolio but thanks to their random account restrictions I finally created it.`},
+  {id:2,title:'Introduction to Algorithms',date:'2025-11-15',content:`Started learning more thoroughly about data structures and algorithms. Currently reading Introduction to Algorithms, third edition.<br></br>Created a <a href="https://github.com/n-zalok/Introduction-to-Algorithms-in-C">repo</a> where I would implement concepts in the book in C. Hope you find it helpful.`}
 ];
 
 // sort posts by date descending
@@ -30,11 +31,13 @@ function renderPosts() {
     const el = document.createElement('div');
     el.className = 'post-card';
 
-    // build post HTML
+    // build post HTML (no thumbnail)
     el.innerHTML = `
-      <h3>${p.title}</h3>
-      <div class="post-date">${p.date}</div>
-      <p>${preview}${isLong ? ` <a class="read-more" href="post.html?id=${p.id}">Read more</a>` : ''}</p>
+      <div class="post-body">
+        <h3>${p.title}</h3>
+        <div class="post-date">${p.date}</div>
+        <p>${preview}${isLong ? ` <a class="read-more" href="post.html?id=${p.id}">Read more</a>` : ''}</p>
+      </div>
     `;
 
     // Make the whole card clickable (optional)
