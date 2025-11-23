@@ -3,7 +3,8 @@ const POSTS_PER_PAGE = 4;
 // Sample posts data. Replace or extend with your own posts (max 50 words in preview will be enforced).
 const posts = [
   {id:1,title:'Welcome to my portfolio',date:'2025-11-11',content:`Here I would share my thoughts, projects and achievements. I delayed creating this portofolio for a long time because I was using Linkedin as my portofolio but thanks to their random account restrictions I finally created it.`},
-  {id:2,title:'Introduction to Algorithms',date:'2025-11-15',content:`Started learning more thoroughly about data structures and algorithms. Currently reading Introduction to Algorithms, third edition.<br></br>Created a <a href="https://github.com/n-zalok/Introduction-to-Algorithms-in-C">repo</a> where I would implement concepts in the book in C. Hope you find it helpful.`}
+  {id:2,title:'Introduction to Algorithms',date:'2025-11-15',content:`Started learning more thoroughly about data structures and algorithms. Currently reading Introduction to Algorithms, third edition.<br></br>Created a <a href="https://github.com/n-zalok/Introduction-to-Algorithms-in-C">repo</a> where I would implement concepts in the book in C. Hope you find it helpful.`},
+  {id:3,title:'Introduction to Algorithms: Foundations',date:'2025-11-23',content:`Finished the first chapter in the book in which I learned:<br></br>Insertion sort<br></br>Merge sort<br></br>Find maximum subarray problem<br></br>Matrix multiplication<br></br>Hiring problem<br></br>I implemented all these algorithms in C <a href="https://github.com/n-zalok/Introduction-to-Algorithms-in-C/tree/main/Foundations">here</a> check it out`}
 ];
 
 // sort posts by date descending
