@@ -31,11 +31,6 @@ function renderProjects(){
       </div>
     `;
 
-    card.addEventListener('click', (e)=>{
-      if(e.target.tagName.toLowerCase() === 'a') return;
-      if(p.link){ window.open(p.link, '_blank', 'noopener'); }
-    });
-
     list.appendChild(card);
   });
 

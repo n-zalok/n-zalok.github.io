@@ -31,18 +31,6 @@ function renderCerts(){
       </div>
     `;
 
-    card.addEventListener('click', (e)=>{
-      if(e.target.tagName.toLowerCase() === 'a') return;
-      const url = c.file || c.link;
-      if(!url) return;
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = '';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    });
-
     list.appendChild(card);
   });
   renderCertPagination();

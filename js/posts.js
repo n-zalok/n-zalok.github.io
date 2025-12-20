@@ -18,13 +18,17 @@ const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 function formatPreview(text, maxWords = 50) {
   const words = text.trim().split(/\s+/);
   const isLong = words.length > maxWords;
-  const preview = isLong ? words.slice(0, maxWords).join(' ') + '...' : text;
-  return { preview, isLong };
+
+  return {
+    preview: isLong ? words.slice(0, maxWords).join(' ') : text,
+    isLong
+  };
 }
 
 function renderPosts() {
   const list = document.getElementById('posts-list');
   list.innerHTML = '';
+
   const start = (currentPage - 1) * POSTS_PER_PAGE;
   const pagePosts = posts.slice(start, start + POSTS_PER_PAGE);
 
@@ -34,21 +38,20 @@ function renderPosts() {
     const el = document.createElement('div');
     el.className = 'post-card';
 
-    // build post HTML (no thumbnail)
     el.innerHTML = `
       <div class="post-body">
         <h3>${p.title}</h3>
         <div class="post-date">${p.date}</div>
-        <p>${preview}${isLong ? ` <a class="read-more" href="post.html?id=${p.id}">Read more</a>` : ''}</p>
+        <p>
+          ${preview}
+          ${
+            isLong
+              ? ` <a class="read-more" href="post.html?id=${p.id}">...see more</a>`
+              : ''
+          }
+        </p>
       </div>
     `;
-
-    // Make the whole card clickable (optional)
-    el.addEventListener('click', e => {
-      // Don't trigger if clicking the link itself
-      if (e.target.tagName.toLowerCase() === 'a') return;
-      window.location.href = `post.html?id=${p.id}`;
-    });
 
     list.appendChild(el);
   });
