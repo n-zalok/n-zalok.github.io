@@ -6,7 +6,8 @@ const projects = [
   {id:3,title:'House-Prices',date:'2025-04-14',description:'Built a regression model using both linear and non-linear techniques to predict the final sale price',thumbnail:'images/projects/house.png',link:'https://www.kaggle.com/code/noorzalouk/house-prices-stacking-regressor'},
   {id:4,title:'Chess-Engine-with-Transformers',date:'2025-08-29',description:'Encoder-only transformer that takes current board as input then outputs next move',thumbnail:'images/projects/chess.jpg',link:'https://github.com/n-zalok/Chess-Engine-with-Transformers'},
   {id:5,title:'Math-Classifier',date:'2025-10-10',description:'Multilabel-Classifier DistilBERT model fine-tuned on Wikipedia math articles from The Mathematics Portal',thumbnail:'images/projects/math.jpg',link:'https://github.com/n-zalok/Math-Classifier'},
-  {id:6,title:'Introduction-to-Algorithms-in-C',date:'2026-01-29',description:'Implementing algorithms and data structures explained in the book "INTRODUCTION TO ALGORITHMS" using C.',thumbnail:'images/projects/book-cover.png',link:'https://github.com/n-zalok/Introduction-to-Algorithms-in-C'}
+  {id:6,title:'Introduction-to-Algorithms-in-C',date:'2026-01-29',description:'Implementing algorithms and data structures explained in the book "INTRODUCTION TO ALGORITHMS" using C.',thumbnail:'images/projects/book-cover.png',link:'https://github.com/n-zalok/Introduction-to-Algorithms-in-C'},
+  {id:6,title:'Python-Editor',date:'2026-05-19',description:'An end-to-end machine learning system that analyzes Python code and generates style and readability recommendations using AST-based feature engineering, model explainability, monitoring, and automated retraining workflows.',thumbnail:'images/projects/Python-Editor.png',link:'https://github.com/n-zalok/Python-Editor'}
 ];
 
 projects.sort((a,b)=> new Date(b.date) - new Date(a.date));
